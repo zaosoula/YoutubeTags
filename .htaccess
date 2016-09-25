@@ -1,0 +1,40 @@
+Options -indexes +FollowSymlinks
+AddType application/x-httpd-php htm html php
+AddHandler application/x-httpd-php .htm .html
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteRule	watch?v=([a-zA-Z0-9_\-]+)	index.php?v=$1 [L]
+
+
+RewriteCond %{REQUEST_METHOD} ^TRACE
+RewriteRule .* - [F]
+<Files ~ "^\.(htaccess|htpasswd)$">
+deny from all
+</Files>
+<IfModule mod_expires.c>
+	ExpiresActive On
+	ExpiresDefault "access plus 7200 seconds"
+	ExpiresByType image/jpg 			"access plus 1 week"
+	ExpiresByType image/jpeg 			"access plus 1 week"
+	ExpiresByType image/png 			"access plus 1 week"
+	ExpiresByType image/gif 			"access plus 1 week"
+	AddType image/x-icon .ico
+	ExpiresByType image/ico 			"access plus 1 week"
+	ExpiresByType image/icon 			"access plus 1 week"
+	ExpiresByType image/x-icon 			"access plus 1 week"
+	ExpiresByType text/css 				"access plus 1 week"
+	ExpiresByType text/javascript 		"access plus 1 week"
+	ExpiresByType text/html 			"access plus 7200 seconds"
+	ExpiresByType application/xhtml+xml 	"access plus 7200 seconds"
+	ExpiresByType application/javascript 	"access plus 1 week"
+	ExpiresByType application/x-javascript 	"access plus 1 week"
+	ExpiresByType application/x-shockwave-flash "access plus 1 week"
+</IfModule>
+ErrorDocument 401 /
+ErrorDocument 403 /
+ErrorDocument 404 " "
+order deny,allow
+Options -Indexes
