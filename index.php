@@ -79,7 +79,7 @@ if($url!=null){
               <?
                 if($status){
                 ?>
-                <li><a href="#one">Miniature</a></li>
+                <li><a href="#one">Miniatures</a></li>
                 <li><a href="#two">Intégrer</a></li>
                 <li><a href="#three">Tags</a></li>
                 <?
@@ -122,7 +122,7 @@ if($url!=null){
 				<!-- One -->
         <section id="one" class="wrapper style2 fade-up">
           <div class="inner">
-            <h2>MINIATURE</h2>
+            <h2>MINIATURES</h2>
             <p>Toutes les miniatures de la vidéo</p>
             <div class="features">
               <section>
@@ -173,7 +173,7 @@ if($url!=null){
         <section id="three" class="wrapper style4 fade-up">
           <div class="inner">
             <h2>TAGS</h2>
-            <p>Tous les mots-clés associée à la vidéo</p>
+            <p>Tous les mots-clés associés à la vidéo</p>
               <?if(!empty($tags['keywords'])){
                 echo '<ul class="actions">';
                 foreach(explode(',',$tags['keywords']) as $tag)
@@ -196,8 +196,8 @@ if($url!=null){
 			<footer id="footer" class="wrapper style1-alt">
 				<div class="inner">
 					<ul class="menu">
-						<li>&copy; Zao Soula. All rights reserved.</li><li>Design: <a target="_blank"  href="http://html5up.net">HTML5 UP</a> & Develop: Zao Soula</li><li><ul class="icons"><li><a target="_blank" href="https://twitter.com/zarque7" class="icon fa-twitter"><span class="label">Twitter</span></a></li><li><a target="_blank" href="https://facebook.com/profile.php?id=100009585529575&ref=ts&fref=ts" class="icon fa-facebook"><span class="label">Facebook</span></a></li><li><a target="_blank" href="https://instagram.com/zarque7" class="icon fa-instagram"><span class="label">Instagram</span></a></li><li><a target="_blank" href="https://linkedin.com/in/zaosoula" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li><li><a target="_blank" href="https://youtube.com/c/zaosoula" class="icon fa-youtube"><span class="label">Youtube</span></a></li><li><a target="_blank" href="https://snapchat.com/add/zarque" class="icon fa-snapchat-ghost "><span class="label">Snapchat</span></a></li></ul></li>
-					</ul>
+						<li>&copy; Zao Soula. All rights reserved.</li><li>Design: <a target="_blank"  href="http://html5up.net">HTML5 UP</a> & Develop: <a href="https://zaosoula.fr/">Zao Soula</a></li>
+          </ul>
 				</div>
 			</footer>
 
