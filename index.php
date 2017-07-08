@@ -25,6 +25,7 @@ if($url!=null){
 
     $content = file_get_contents("http://www.youtube.com/get_video_info?video_id=".$ref);
     parse_str($content, $tags);
+    echo json_encode($tags);
   }else{
     $attr = 'invalid';
     $url = 'https://www.youtube.com/watch?v='.$v;
@@ -114,7 +115,12 @@ if($url!=null){
                     <input type="hidden" id="youtubeembed" value="https://www.youtube.com/embed/<?echo$ref?>"></iframe>
                   </div>
                 </div>
-                <?}?>
+                <?}else{?>
+                  <div class="6u 12u$(medium) align-center">
+                    <a class="button" href="javascript:if(window.location.host=='www.youtube.com' || window.location.host=='youtube.com'){window.location.href='https://youtube-tags.com'+window.location.pathname+window.location.search;}else{window.location.href='https://youtube-tags.com'}void(0);">Open in Youtube Tags</a><br>
+                    Drag the button to your bookmarks bar <br> to open YouTube Tags more easily!
+                  </div>
+                  <?}?>
 						</div>
           </div>
 					</section>
@@ -210,18 +216,16 @@ if($url!=null){
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
 
-      <? if($_SERVER['HTTP_HOST']=='zaosoula.fr')
-      echo "<script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-        ga('create', 'UA-42595785-8', 'auto');
-        ga('send', 'pageview');
+  ga('create', 'UA-42595785-10', 'auto');
+  ga('send', 'pageview');
 
-      </script>"
-      ?>
+</script>
 
 	</body>
 </html>
