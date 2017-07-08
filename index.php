@@ -25,7 +25,6 @@ if($url!=null){
 
     $content = file_get_contents("http://www.youtube.com/get_video_info?video_id=".$ref);
     parse_str($content, $tags);
-    echo json_encode($tags);
   }else{
     $attr = 'invalid';
     $url = 'https://www.youtube.com/watch?v='.$v;
