@@ -116,7 +116,7 @@ if($url!=null){
                 </div>
                 <?}else{?>
                   <div class="6u 12u$(medium) align-center">
-                    <a class="button" href="javascript:if(window.location.host=='www.youtube.com' || window.location.host=='youtube.com'){window.location.href='https://youtube-tags.com'+window.location.pathname+window.location.search;}else{window.location.href='https://youtube-tags.com'}void(0);">Open in Youtube Tags</a><br>
+                    <a class="button" href="javascript:if(window.location.host=='www.youtube.com' || window.location.host=='youtube.com'){window.location.href='https://zaosoula.fr/YoutubeTags'+window.location.pathname+window.location.search;}else{window.location.href='https://zaosoula.fr/YoutubeTags/'}void(0);">Open in Youtube Tags</a><br>
                     Drag the button to your bookmarks bar <br> to open YouTube Tags more easily!
                   </div>
                   <?}?>
